@@ -1,3 +1,20 @@
+// GIVEN a command-line application that accepts user input
+
+// WHEN I am prompted for information about my application repository
+
+/* THEN a high-quality, professional README.md is generated 
+        // with 
+        the title of my project 
+        and sections entitled 
+        Description, 
+        Table of Contents, 
+        Installation, 
+        Usage, 
+        License, 
+        Contributing, 
+        Tests, and 
+        Questions*/
+
 // array of questions for user
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
@@ -5,24 +22,32 @@ const generateMarkdown = require('./utils/generateMarkdown');
 const questions = () => {
     return inquirer.prompt([
         //Your Project Title
+        // WHEN I enter my project title
+        // THEN this is displayed as the title of the README
         {
             type: 'input',
-            name: 'name',
-            message: 'What is the name of your project?',
-            validate: projName => {
-                if (projName) {
+            name: 'title',
+            message: 'What is the title of your project? (Required)',
+            validate: projTitle => {
+                if (projTitle) {
                   return true;
                 } else {
-                  console.log('Please enter the name of your project!');
+                  console.log('Please enter the title of your project!');
                   return false;
                 }
             }
           },
+
+            /* WHEN I enter a description, installation instructions, 
+          usage information, contribution guidelines, and test instructions*/
+          /* THEN this information is added to the sections of the README 
+          entitled Description, Installation, Usage, Contributing, and Tests*/
+
           //Description
           {
             type: 'input',
             name: 'description',
-            message: 'Provide a description of the project (Required)',
+            message: 'Provide a description of your project (Required)',
             validate: projDesc => {
                 if (projDesc) {
                   return true;
@@ -32,7 +57,7 @@ const questions = () => {
                 }
             }
           },
-          //Installation
+          //Installation Instructions
           {
             type: 'input',
             name: 'installation',
@@ -46,7 +71,7 @@ const questions = () => {
                 }
             }
           },
-          //usage
+          //Usage Instructions-screeshots? what to do with that? Dont think this is part of the challenge, though
           {
             type: 'input',
             name: 'usage',
@@ -60,79 +85,101 @@ const questions = () => {
                 }
             }
           },
-          //credits
+
+        //   License and Badge
+          //tricky part here is how to take whatever the badge is for the license they choose and have this 
+          //appear somewhere in the readme. Diddo for the actual license, which I would like to appear in the readme. 
+          //So, two questions for tomorrow: 
+          
+          //1. how to generate badge based on their repsonse to the below checkbox? and 
+          //2. how to generate the actual license language in the "License section"
+
+          // WHEN I choose a license for my application from a list of options
+          //this is where they are asking for the multiple choice-we did this in the other project. 
+          /* THEN a badge for that license is added near the top of the README 
+          and a notice is added to the section of the README entitled License 
+          that explains which license the application is covered under*/
+          //am I making my own badge for these licenses? 
           {
-            type: 'input',
-            name: 'credits',
-            message: 'List your collaborators, if any, with links to their GitHub profiles. If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section. If you followed tutorials, include links to those here as well.  (Required)',
-            validate: projCreds => {
-                if (projCreds) {
-                  return true;
-                } else {
-                  console.log('Please enter a description of your project credits!');
-                  return false;
-                }
-            }
-          },
-          //license
-          {
-            type: 'input',
+            type: 'checkbox',
             name: 'license',
             message: 'The last section of a good README is a license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, use [https://choosealicense.com/](https://choosealicense.com/)  (Required)',
+            choices: ['MIT','GNU AGPLv3', 'Mozilla Public','Apache','Boost Software','The Unlicense']
             validate: projLicense => {
                 if (projLicense) {
                   return true;
                 } else {
-                  console.log('Please enter a description of your project license!');
+                  console.log('Please enter a project license!');
                   return false;
                 }
             }
           },
-          // The sections listed above are the minimum for a good README, so they are required
-          //but your project will ultimately determine the content of this document. 
-          //You might also want to consider adding the following sections. So, for these questions the quesitons will be optional and have confirms.
           
-          //badges
+          //contributing guidelines
+          {
+            type: 'input',
+            name: 'contributing',
+            message: 'Provide Guidelines for Contributing to this Project.  (Required)',
+            validate: projCreds => {
+                if (projCreds) {
+                  return true;
+                } else {
+                  console.log('Please enter contribution guidelines for this project!');
+                  return false;
+                }
+            }
+          },
           
-          {
-            type: 'confirm',
-            name: 'confirmBadges',
-            message: 'Badges are not necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you are doing. Check out the badges hosted by shields.io. You may not understand what they all represent now, but you will in time. Do you want to add badges?',
-            default: true
-          },
+          //Test Instructions
           {
             type: 'input',
-            name: 'badges',
-            message: 'Provide some information about yourself:',
-            when: ({ confirmAbout }) => confirmAbout
-          }
-          //contributing
-          {
-            type: 'confirm',
-            name: 'confirmAbout',
-            message: 'Would you like to enter some information about yourself for an "About" section?',
-            default: true
+            name: 'tests',
+            message: 'Provide Testing Instructions for this Project.  (Required)',
+            validate: projTests => {
+                if (projTests) {
+                  return true;
+                } else {
+                  console.log('Please enter test instructions!');
+                  return false;
+                }
+            }
           },
-          {
-            type: 'input',
-            name: 'about',
-            message: 'Provide some information about yourself:',
-            when: ({ confirmAbout }) => confirmAbout
-          }
-          //tests
-          {
-            type: 'confirm',
-            name: 'confirmAbout',
-            message: 'Would you like to enter some information about yourself for an "About" section?',
-            default: true
-          },
-          {
-            type: 'input',
-            name: 'about',
-            message: 'Provide some information about yourself:',
-            when: ({ confirmAbout }) => confirmAbout
-          }
+          //Questions?
+          
+            // WHEN I enter my GitHub username
 
+            // THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
+
+            // WHEN I enter my email address
+
+            // THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
+            {
+                type: 'input',
+                name: 'github',
+                message: 'What is your GitHub username?',
+                validate: gitUserName => {
+                    if (gitUserName) {
+                      return true;
+                    } else {
+                      console.log('Please enter your GitHub username!');
+                      return false;
+                    }
+                }
+            },
+            {
+                type: 'input',
+                name: 'email',
+                message: 'What is your email address?',
+                validate: gitEmail => {
+                    if (gitEmail) {
+                      return true;
+                    } else {
+                      console.log('Please enter your GitHub username!');
+                      return false;
+                    }
+                }
+            },
+        
     ]);
 };
 
