@@ -1,39 +1,39 @@
 
-  # README Generator
-  ![GitHub license](https://img.shields.io/badge/license--blue.svg)<br>
+  # readme
+  [![License](https://img.shields.io/badge/License-GNU AGPL v3-blue.svg)](https://opensource.org/licenses/GNU AGPL v3)<br>
 
-  ##Description<br>
+  Description<br>
 
-  Command Line App that easily generates a README.md file
+  readme generator
 
-  ##Table of Contents<br>
-node
-  **[Installation Instructions](#installation-instructions)**<br>
-  **[Usage Instructions](#usage-instructions)**<br>
+  Table of Contents<br>
+
+  *[Installation Instructions](#installation-instructions)
+  *[Usage Instructions](#usage-instructions)
   
 * [License](#license)
 
-  **[Contributing](#contributing)**<br>
-  **[Tests](#tests)**<br>
-  **[Questions](#questions)**<br>
+  *[Contributing](#contributing)
+  *[Tests](#tests)
+  *[Questions](#questions)
 
 
-  ##**Installation Instructions**<br>
-  nmp install
+  Installation Instructions
+  npm install
 
-  ##**Usage Instructions**<br>
-  this is how you use it
+  Usage Instructions
+  npm start
 
   ##**License**
 
-### This application is licensed under the  license.
+### This application is licensed under the GNU AGPL v3 license.
 
-  ##**Contributing**
-  ### this is how you contribute;
+  Contributing
+  this is how you contribute;
 
-  ##**Tests**
-  ### this is how you test;
+  Tests
+  this is how you test;
 
-  ##**Questions**
-  ### My GitHub Profile: this is your github name;
-  ### Have Questions? Reach out to me at this is your email address;
+  Questions
+  My GitHub Profile: this is my github username;
+  Have Questions? Reach out to me at this is my email address;

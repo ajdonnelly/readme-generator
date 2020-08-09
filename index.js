@@ -70,10 +70,10 @@ const questions = [
           that explains which license the application is covered under*/
           //am I making my own badge for these licenses? 
           {
-            type: 'checkbox',
+            type: 'list',
             name: 'license',
             message: 'The last section of a good README is a license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, use [https://choosealicense.com/](https://choosealicense.com/)  (Required)',
-            choices: ['MIT','GNU AGPLv3', 'Mozilla Public','Apache','Boost Software','The Unlicense', 'None']
+            choices: ['MIT','GNU AGPL v3', 'Mozilla Public','Apache 2.0','Boost Software','The Unlicense', 'None']
           },
           
           //contributing guidelines

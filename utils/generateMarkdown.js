@@ -2,7 +2,8 @@
 //render license badge 
 function licenseBadge (license) {
   if (license !== "None") {
-    return `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`
+    return `[![License](https://img.shields.io/badge/License-${license}-blue.svg)](https://opensource.org/licenses/${license})`
+  
   }
   return ""
 }
@@ -10,7 +11,9 @@ function licenseBadge (license) {
 //render link to the license
 function licenseLink (license) {
   if (license !== "None") {
-    return `\n* [License](#license)\n`
+    return ( 
+      `\n* [License](#license)\n`
+      )
   }
   return ""
 }
@@ -32,37 +35,37 @@ function generateMarkdown(data) {
   # ${data.title}
   ${licenseBadge(data.license)}<br>
 
-  ##Description<br>
+  Description<br>
 
   ${data.description}
 
-  ##Table of Contents<br>
-node
-  **[Installation Instructions](#installation-instructions)**<br>
-  **[Usage Instructions](#usage-instructions)**<br>
+  Table of Contents<br>
+
+  *[Installation Instructions](#installation-instructions)
+  *[Usage Instructions](#usage-instructions)
   ${licenseLink(data.license)}
-  **[Contributing](#contributing)**<br>
-  **[Tests](#tests)**<br>
-  **[Questions](#questions)**<br>
+  *[Contributing](#contributing)
+  *[Tests](#tests)
+  *[Questions](#questions)
 
 
-  ##**Installation Instructions**<br>
+  Installation Instructions
   ${data.installation}
 
-  ##**Usage Instructions**<br>
+  Usage Instructions
   ${data.usage}
 
   ${displayLicense(data.license)}
 
-  ##**Contributing**
-  ### ${data.contributing};
+  Contributing
+  ${data.contributing};
 
-  ##**Tests**
-  ### ${data.tests};
+  Tests
+  ${data.tests};
 
-  ##**Questions**
-  ### My GitHub Profile: ${data.github};
-  ### Have Questions? Reach out to me at ${data.email};
+  Questions
+  My GitHub Profile: ${data.github};
+  Have Questions? Reach out to me at ${data.email};
 `;
 }
 
