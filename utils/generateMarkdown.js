@@ -1,5 +1,5 @@
 
-//render license badge 
+//license badge 
 function licenseBadge (license) {
   if (license !== "None") {
 
@@ -9,7 +9,7 @@ function licenseBadge (license) {
   return ''
 }
 
-//render link to the license
+//link to the license
 function licenseLink (license) {
   if (license !== "None") {
     return ( 
@@ -19,6 +19,7 @@ function licenseLink (license) {
   return ''
 }
 
+//license section
 function displayLicense (license) {
   if (license !== "None") {
   return (
