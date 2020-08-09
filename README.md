@@ -1,10 +1,10 @@
 
-  # readme 
-  [![License](https://img.shields.io/badge/license-MIT-blue.svg)] (https://opensource.org/licenses/MIT)<br>
+  # readme
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)<br>
 
   Description<br>
 
-  readme maker
+  fj
 
   Table of Contents<br>
 
@@ -19,21 +19,21 @@
 
 
   Installation Instructions
-  these are steps
+  fj
 
   Usage Instructions
-  these are instructions
+  fj
 
   ##**License**
 
 ### This application is licensed under the MIT license.
 
   Contributing
-  these are guidelines;
+  fj;
 
   Tests
-  these are testing inst;
+  fj;
 
   Questions
-  My GitHub Profile: fein;
-  Have Questions? Reach out to me at efijejime;
+  My GitHub Profile: fj;
+  Have Questions? Reach out to me at fj;
