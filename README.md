@@ -1,12 +1,12 @@
 
   # fs
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)<br>
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   ## Description<br>
 
   fs
 
-  ## Table of Contents<br>
+  ## Table of Contents
 
   * [Installation Instructions](#installation-instructions)
   
@@ -22,7 +22,7 @@
 * [License](#license)
 
 
-  ## Installation Instructions
+## Installation Instructions
   fs
 
   ## Usage Instructions

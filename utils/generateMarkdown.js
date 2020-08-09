@@ -34,13 +34,13 @@ return (
 function generateMarkdown(data) {
   return `
   # ${data.title}
-  ${licenseBadge(data.license)}<br>
+  ${licenseBadge(data.license)}
 
   ## Description<br>
 
   ${data.description}
 
-  ## Table of Contents<br>
+  ## Table of Contents
 
   * [Installation Instructions](#installation-instructions)
   
@@ -54,7 +54,7 @@ function generateMarkdown(data) {
 
   ${licenseLink(data.license)}
 
-  ## Installation Instructions
+## Installation Instructions
   ${data.installation}
 
   ## Usage Instructions
