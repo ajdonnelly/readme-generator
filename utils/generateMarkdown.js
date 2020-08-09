@@ -54,7 +54,7 @@ function generateMarkdown(data) {
 
   ${licenseLink(data.license)}
 
-  ## Installation Instructions
+## Installation Instructions
   ${data.installation}
 
   ## Usage Instructions
