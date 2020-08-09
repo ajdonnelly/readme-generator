@@ -46,14 +46,13 @@ function generateMarkdown(data) {
   
   * [Usage Instructions](#usage-instructions)
   
-  * ${licenseLink(data.license)}
-  
   * [Contributing](#contributing)
   
   * [Tests](#tests)
   
   * [Questions](#questions)
 
+    ${licenseLink(data.license)}
 
   ## Installation Instructions
   ${data.installation}
@@ -61,17 +60,18 @@ function generateMarkdown(data) {
   ## Usage Instructions
   ${data.usage}
 
-  ${displayLicense(data.license)}
-
   ## Contributing
-  ${data.contributing};
+  ${data.contributing}
 
   ## Tests
-  ${data.tests};
+  ${data.tests}
 
   ## Questions
-  My GitHub Profile: ${data.github};
-  Have Questions? Reach out to me at ${data.email};
+  Have Questions about this Repository? Reach me at:<br> 
+  My GitHub Profile: ${data.github}<br> 
+  My email: ${data.email}<br> 
+
+  ${displayLicense(data.license)}
 `;
 }
 

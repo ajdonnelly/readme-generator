@@ -1,6 +1,6 @@
 
   # fs
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)<br>
+  [![License: Zlib](https://img.shields.io/badge/License-Zlib-yellow.svg)](https://opensource.org/licenses/Zlib)<br>
 
   ## Description<br>
 
@@ -12,15 +12,14 @@
   
   * [Usage Instructions](#usage-instructions)
   
-  * 
-* [License](#license)
-
-  
   * [Contributing](#contributing)
   
   * [Tests](#tests)
   
   * [Questions](#questions)
+
+    
+* [License](#license)
 
 
   ## Installation Instructions
@@ -29,16 +28,17 @@
   ## Usage Instructions
   fs
 
-  ## License
-
-  ### This application is licensed under the MIT license.
-
   ## Contributing
-  fs;
+  fs
 
   ## Tests
-  fs;
+  fs
 
   ## Questions
-  My GitHub Profile: fs;
-  Have Questions? Reach out to me at fs;
+  Have Questions about this Repository? Reach me at:<br> 
+  My GitHub Profile: fs<br> 
+  My email: fs<br> 
+
+  ## License
+
+  ### This application is licensed under the Zlib license.
