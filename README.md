@@ -1,10 +1,10 @@
 
-  # fs
+  # This is where you include your project title
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   ## Description<br>
 
-  fs
+  This is where you include your project description
 
   ## Table of Contents
 
@@ -23,21 +23,21 @@
 
 
 ## Installation Instructions
-  fs
+  This is where you inclue installation instructions
 
   ## Usage Instructions
-  fs
+  This is where you include use instructions
 
   ## Contributing
-  fs
+  This is where you include guidelines
 
   ## Tests
-  fs
+  This is where you include testing instructions
 
   ## Questions
   Have Questions about this Repository? Reach me at:<br> 
-  My GitHub Profile: fs<br> 
-  My email: fs<br> 
+  My GitHub Profile: This is where you include your GitHub username<br> 
+  My email: This is where you include your email address<br> 
 
   ## License
 
