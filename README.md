@@ -1,10 +1,10 @@
 
-  # README Generator
-  ![License](https://img.shields.io/badge/license-MIT-blue.svg)<br>
+  # readme 
+  [![License](https://img.shields.io/badge/license-MIT-blue.svg)] (https://opensource.org/licenses/MIT)<br>
 
   Description<br>
 
-  creates readme
+  readme maker
 
   Table of Contents<br>
 
@@ -22,7 +22,7 @@
   these are steps
 
   Usage Instructions
-  this is how you use
+  these are instructions
 
   ##**License**
 
@@ -32,8 +32,8 @@
   these are guidelines;
 
   Tests
-  this is how you test;
+  these are testing inst;
 
   Questions
-  My GitHub Profile: git;
-  Have Questions? Reach out to me at email;
+  My GitHub Profile: fein;
+  Have Questions? Reach out to me at efijejime;

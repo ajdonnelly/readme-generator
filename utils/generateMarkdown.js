@@ -2,7 +2,7 @@
 //render license badge 
 function licenseBadge (license) {
   if (license !== "None") {
-    return `![License](https://img.shields.io/badge/license-${license}-blue.svg)`
+    return `[![License](https://img.shields.io/badge/license-${license}-blue.svg)] (https://opensource.org/licenses/${license})`
   
   }
   return ''
