@@ -21,10 +21,10 @@ function licenseLink (license) {
 
 function displayLicense (license) {
   if (license !== "None") {
-return (
-`## License
+  return (
+  `## License
 
-  ### This application is licensed under the ${license} license.`
+    ### This application is licensed under the ${license} license.`
     )
   }
   return ''
