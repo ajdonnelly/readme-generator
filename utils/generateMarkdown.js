@@ -2,12 +2,12 @@
 //render license badge 
 function licenseBadge (license) {
   if (license !== "None") {
-    return `[![License](https://img.shields.io/badge/License-${license}-blue.svg)](https://opensource.org/licenses/${license})`
+    return `![License](https://img.shields.io/badge/license-${license}-blue.svg)`
   
   }
-  return ""
+  return ''
 }
-
+ this 
 //render link to the license
 function licenseLink (license) {
   if (license !== "None") {
@@ -15,7 +15,7 @@ function licenseLink (license) {
       `\n* [License](#license)\n`
       )
   }
-  return ""
+  return ''
 }
 
 function displayLicense (license) {
@@ -26,7 +26,7 @@ return (
 ### This application is licensed under the ${license} license.`
     )
   }
-  return ""
+  return ''
 }
 
 // function to generate markdown for README

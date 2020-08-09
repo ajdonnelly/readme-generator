@@ -1,10 +1,10 @@
 
-  # readme
-  [![License](https://img.shields.io/badge/License-GNU AGPL v3-blue.svg)](https://opensource.org/licenses/GNU AGPL v3)<br>
+  # README Generator
+  ![License](https://img.shields.io/badge/license-MIT-blue.svg)<br>
 
   Description<br>
 
-  readme generator
+  creates readme
 
   Table of Contents<br>
 
@@ -19,21 +19,21 @@
 
 
   Installation Instructions
-  npm install
+  these are steps
 
   Usage Instructions
-  npm start
+  this is how you use
 
   ##**License**
 
-### This application is licensed under the GNU AGPL v3 license.
+### This application is licensed under the MIT license.
 
   Contributing
-  this is how you contribute;
+  these are guidelines;
 
   Tests
   this is how you test;
 
   Questions
-  My GitHub Profile: this is my github username;
-  Have Questions? Reach out to me at this is my email address;
+  My GitHub Profile: git;
+  Have Questions? Reach out to me at email;

@@ -72,7 +72,7 @@ const questions = [
           {
             type: 'list',
             name: 'license',
-            message: 'The last section of a good README is a license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, use [https://choosealicense.com/](https://choosealicense.com/)  (Required)',
+            message: 'Select a license for this project. This lets other developers know what they can and cannot do with your project. (Required)',
             choices: ['MIT','GNU AGPL v3', 'Mozilla Public','Apache 2.0','Boost Software','The Unlicense', 'None']
           },
           
