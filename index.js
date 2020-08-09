@@ -73,7 +73,7 @@ const questions = [
             type: 'list',
             name: 'license',
             message: 'Select a license for this project. This lets other developers know what they can and cannot do with your project. (Required)',
-            choices: ['MIT','ISC', 'MPL 2.0','IPL 1.0','EPL 1.0', 'None']
+            choices: ['MIT','ISC', 'Zlib', 'None']
           },
           
           //contributing guidelines
