@@ -40,14 +40,19 @@ function generateMarkdown(data) {
 
   ${data.description}
 
-  Table of Contents<br>
+  ## Table of Contents<br>
 
-  *[Installation Instructions](#installation-instructions)
-  *[Usage Instructions](#usage-instructions)
+  * [Installation Instructions](#installation-instructions)
+  
+  * [Usage Instructions](#usage-instructions)
+  
   ${licenseLink(data.license)}
-  *[Contributing](#contributing)
-  *[Tests](#tests)
-  *[Questions](#questions)
+  
+  * [Contributing](#contributing)
+  
+  * [Tests](#tests)
+  
+  * [Questions](#questions)
 
 
   Installation Instructions
