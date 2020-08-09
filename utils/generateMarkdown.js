@@ -32,22 +32,22 @@ function generateMarkdown(data) {
   # ${data.title}
   ${licenseBadge(data.license)}
   ##**Description**
-  ### ${data.description}
+  ${data.description}
 
-  ##**Table of Contents**
+  ##**Table of Contents**<br>
   **[Installation Instructions](#installation-instructions)**<br>
   **[Usage Instructions](#usage-instructions)**<br>
-  **${licenseLink(data.license)}**<br>
+  ${licenseLink(data.license)}
   **[Contributing](#contributing)**<br>
   **[Tests](#tests)**<br>
   **[Questions](#questions)**<br>
 
 
   ##**Installation Instructions**
-  ### ${data.installation};
+  ${data.installation}
 
   ##**Usage Instructions**
-  ### ${data.usage};
+  ${data.usage}
 
   ${displayLicense(data.license)}
 
