@@ -1,10 +1,13 @@
 
-  # fs
-  [![License](https://img.shields.io/badge/License--yellowgreen.svg)](https://opensource.org/licenses/)
-  ##**Description**
-  hell
+  # README Generator
+  ![GitHub license](https://img.shields.io/badge/license--blue.svg)<br>
 
-  ##**Table of Contents**<br>
+  ##Description<br>
+
+  Command Line App that easily generates a README.md file
+
+  ##Table of Contents<br>
+node
   **[Installation Instructions](#installation-instructions)**<br>
   **[Usage Instructions](#usage-instructions)**<br>
   
@@ -15,22 +18,22 @@
   **[Questions](#questions)**<br>
 
 
-  ##**Installation Instructions**
-  push play
+  ##**Installation Instructions**<br>
+  nmp install
 
-  ##**Usage Instructions**
-  do it
+  ##**Usage Instructions**<br>
+  this is how you use it
 
   ##**License**
 
 ### This application is licensed under the  license.
 
   ##**Contributing**
-  ### don't steal;
+  ### this is how you contribute;
 
   ##**Tests**
-  ### testing instructions;
+  ### this is how you test;
 
   ##**Questions**
-  ### My GitHub Profile: ajdonnelly;
-  ### Have Questions? Reach out to me at a.james.donnelly@gmail.com;
+  ### My GitHub Profile: this is your github name;
+  ### Have Questions? Reach out to me at this is your email address;
