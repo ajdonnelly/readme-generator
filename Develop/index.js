@@ -16,12 +16,12 @@
         Questions*/
 
 // array of questions for user
+const fs = require("fs");
 const inquirer = require('inquirer');
-const {data} = require('./utils/generateMarkdown');
+const generateMarkdown = require('./utils/generateMarkdown');
+const path = require("path");
 
-
-const questions = () => {
-    return inquirer.prompt([
+const questions = [
         //Your Project Title
         // WHEN I enter my project title
         // THEN this is displayed as the title of the README
@@ -29,14 +29,6 @@ const questions = () => {
             type: 'input',
             name: 'title',
             message: 'What is the title of your project? (Required)',
-            validate: projTitle => {
-                if (projTitle) {
-                  return true;
-                } else {
-                  console.log('Please enter the title of your project!');
-                  return false;
-                }
-            }
           },
 
             /* WHEN I enter a description, installation instructions, 
@@ -49,42 +41,18 @@ const questions = () => {
             type: 'input',
             name: 'description',
             message: 'Provide a description of your project (Required)',
-            validate: projDesc => {
-                if (projDesc) {
-                  return true;
-                } else {
-                  console.log('Please enter a description of your project!');
-                  return false;
-                }
-            }
           },
           //Installation Instructions
           {
             type: 'input',
             name: 'installation',
             message: 'What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running. (Required)',
-            validate: projInst => {
-                if (projInst) {
-                  return true;
-                } else {
-                  console.log('Please enter a description of your project installation!');
-                  return false;
-                }
-            }
           },
           //Usage Instructions-screeshots? what to do with that? Dont think this is part of the challenge, though
           {
             type: 'input',
             name: 'usage',
             message: 'Provide instructions and examples for use. Include screenshots as needed.  (Required)',
-            validate: projUse => {
-                if (projUse) {
-                  return true;
-                } else {
-                  console.log('Please enter a description of your project usage!');
-                  return false;
-                }
-            }
           },
 
         //   License and Badge
@@ -105,15 +73,7 @@ const questions = () => {
             type: 'checkbox',
             name: 'license',
             message: 'The last section of a good README is a license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, use [https://choosealicense.com/](https://choosealicense.com/)  (Required)',
-            choices: ['MIT','GNU AGPLv3', 'Mozilla Public','Apache','Boost Software','The Unlicense']
-            validate: projLicense => {
-                if (projLicense) {
-                  return true;
-                } else {
-                  console.log('Please enter a project license!');
-                  return false;
-                }
-            }
+            choices: ['MIT','GNU AGPLv3', 'Mozilla Public','Apache','Boost Software','The Unlicense', 'None']
           },
           
           //contributing guidelines
@@ -121,14 +81,6 @@ const questions = () => {
             type: 'input',
             name: 'contributing',
             message: 'Provide Guidelines for Contributing to this Project.  (Required)',
-            validate: projCreds => {
-                if (projCreds) {
-                  return true;
-                } else {
-                  console.log('Please enter contribution guidelines for this project!');
-                  return false;
-                }
-            }
           },
           
           //Test Instructions
@@ -136,14 +88,6 @@ const questions = () => {
             type: 'input',
             name: 'tests',
             message: 'Provide Testing Instructions for this Project.  (Required)',
-            validate: projTests => {
-                if (projTests) {
-                  return true;
-                } else {
-                  console.log('Please enter test instructions!');
-                  return false;
-                }
-            }
           },
           //Questions?
           
@@ -158,62 +102,54 @@ const questions = () => {
                 type: 'input',
                 name: 'github',
                 message: 'What is your GitHub username?',
-                validate: gitUserName => {
-                    if (gitUserName) {
-                      return true;
-                    } else {
-                      console.log('Please enter your GitHub username!');
-                      return false;
-                    }
-                }
             },
             {
                 type: 'input',
                 name: 'email',
                 message: 'What is your email address?',
-                validate: gitEmail => {
-                    if (gitEmail) {
-                      return true;
-                    } else {
-                      console.log('Please enter your GitHub username!');
-                      return false;
-                    }
-                }
             },
         
-    ]);
-};
+    ];
 
-const writeToFile = data => {
-    return new Promise((resolve, reject) => {
-      fs.writeFile('./README.md', data, err => {
-        // if there's an error, reject the Promise and send the error to the Promise's `.catch()` method
-        if (err) {
-          reject(err);
-          // return out of the function here to make sure the Promise doesn't accidentally execute the resolve() function as well
-          return;
-        }
+// const writeToFile = generateMarkdown => {
+//     return new Promise((resolve, reject) => {
+//       fs.writeFile('./README.md', generateMarkdown, err => {
+//         // if there's an error, reject the Promise and send the error to the Promise's `.catch()` method
+//         if (err) {
+//           reject(err);
+//           // return out of the function here to make sure the Promise doesn't accidentally execute the resolve() function as well
+//           return;
+//         }
   
-        // if everything went well, resolve the Promise and send the successful data to the `.then()` method
-        resolve({
-          ok: true,
-          message: 'File created!'
-        });
-      });
-    });
-  };
+//         // if everything went well, resolve the Promise and send the successful data to the `.then()` method
+//         resolve({
+//           ok: true,
+//           message: 'File created!'
+//         });
+//       });
+//     });
+//   };
 
 // function to write README file
 function writeToFile(fileName, data) {
+  return fs.writeFileSync(path.join(process.cwd(), fileName), data);
 }
+
 
 // function to initialize program
 function init() {
-
-}
+    inquirer
+    //pass questions through
+    .prompt(questions)
+    //collect answers
+    .then((answers) => {
+        //let user know the readme is being generated
+      console.log("README generating...");
+      //write template to file running the answer through the template function
+      writeToFile("README.md", generateMarkdown({...answers}));
+    })
+  }
 
 // function call to initialize program
 init()
-.then(pageMarkdown => {
-    return generateMarkdown(pageMarkdown);
-  });
+
