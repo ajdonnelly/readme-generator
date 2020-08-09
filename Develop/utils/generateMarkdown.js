@@ -1,15 +1,38 @@
 
+//render license badge 
+function licenseBadge (license) {
+  if (license !== "None") {
+    return `[![License](https://img.shields.io/badge/License-${license}-yellowgreen.svg)](https://opensource.org/licenses/${license})`
+  }
+  return ""
+}
 
+//render link to the license
+function licenseLink (license) {
+  if (license !== "None") {
+    return `\n* [License](#license)\n`
+  }
+  return ""
+}
+
+function displayLicense (license) {
+  if (license !== "None") {
+return (
+`##**License**
+
+### This application is licensed under the ${license} license.`
+    )
+  }
+  return ""
+}
 
 // function to generate markdown for README
 function generateMarkdown(data) {
   return `
-  //badge goes here? this has to connect with the 
-  //license somehow
-  # ${data.title};
+  # ${data.title}
   ${licenseBadge(data.license)}
   ##**Description**
-  ### ${data.description};
+  ### ${data.description}
 
   ##**Table of Contents**
   **[Installation Instructions](#installation-instructions)**<br>
@@ -39,29 +62,6 @@ function generateMarkdown(data) {
   ### Have Questions? Reach out to me at ${data.email};
 `;
 }
-//render license badge 
-function licenseBadge (license) {
-  if (license !== "None") {
-    return `[![License](https://img.shields.io/badge/License-${license}-yellowgreen.svg)](https://opensource.org/licenses/${license})`
-  }
-  return ""
-}
 
-//render link to the license
-function licenseLink (license) {
-  if (license !== "None") {
-    return `\n* [License](#license)\n`
-  }
-  return ""
-}
 
-function displayLicense (license) {
-  if (license !== "None") {
-return (
-`##**License**
-### This application is licensed under the ${license} license;`)
-  }
-  return ""
-}
-
-module.exports = generateMarkdown;
+module.exports = { generateMarkdown };
