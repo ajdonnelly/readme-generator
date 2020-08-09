@@ -22,9 +22,9 @@ function licenseLink (license) {
 function displayLicense (license) {
   if (license !== "None") {
 return (
-`##**License**
+`## License
 
-### This application is licensed under the ${license} license.`
+  ### This application is licensed under the ${license} license.`
     )
   }
   return ''
@@ -46,7 +46,7 @@ function generateMarkdown(data) {
   
   * [Usage Instructions](#usage-instructions)
   
-  ${licenseLink(data.license)}
+  * ${licenseLink(data.license)}
   
   * [Contributing](#contributing)
   
@@ -55,25 +55,24 @@ function generateMarkdown(data) {
   * [Questions](#questions)
 
 
-  Installation Instructions
+  ## Installation Instructions
   ${data.installation}
 
-  Usage Instructions
+  ## Usage Instructions
   ${data.usage}
 
   ${displayLicense(data.license)}
 
-  Contributing
+  ## Contributing
   ${data.contributing};
 
-  Tests
+  ## Tests
   ${data.tests};
 
-  Questions
+  ## Questions
   My GitHub Profile: ${data.github};
   Have Questions? Reach out to me at ${data.email};
 `;
 }
-
 
 module.exports = generateMarkdown;
