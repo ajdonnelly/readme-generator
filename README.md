@@ -2,7 +2,7 @@
  
  Link to GitHub Repo: https://github.com/ajdonnelly/readme-generator
  
- Sample README for the command line output is titled: 
+ Sample README for the command line output is titled: "sampleREADME.md"
  
  
   
