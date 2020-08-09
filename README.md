@@ -1,6 +1,6 @@
 
   # fs
-  [![License: Zlib](https://img.shields.io/badge/License-Zlib-yellow.svg)](https://opensource.org/licenses/Zlib)<br>
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)<br>
 
   ## Description<br>
 
@@ -18,7 +18,7 @@
   
   * [Questions](#questions)
 
-    
+  
 * [License](#license)
 
 
@@ -41,4 +41,4 @@
 
   ## License
 
-  ### This application is licensed under the Zlib license.
+  ### This application is licensed under the MIT license.
